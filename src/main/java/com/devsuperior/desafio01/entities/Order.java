@@ -1,10 +1,17 @@
 package com.devsuperior.desafio01.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.devsuperior.desafio01.services.ShippingService;
+
 public class Order {
 
     private int code;
     private double basic;
     private double discount;
+    
+    @Autowired
+    ShippingService service;
 
     public Order() {
     }
