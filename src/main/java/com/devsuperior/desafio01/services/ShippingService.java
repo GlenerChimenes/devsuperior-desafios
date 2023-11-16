@@ -8,7 +8,7 @@ public class ShippingService {
 
 	 public double shipment(Order order){
 
-	        double ValorComDesconto = order.getBasic() - (order.getBasic() * order.getDiscount());
+	        double ValorComDesconto = order.getBasic() - (order.getBasic() * (order.getDiscount() / 100));
 
 	        if (ValorComDesconto   < 100.0){
 	            return ValorComDesconto  + 20  ;
